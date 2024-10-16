@@ -34,7 +34,7 @@ data:
     {{- .Values.log | nindent 4 }}
   {{- if .Values.velox.enabled }}
   velox.properties.template: |-
-  {{- .Values.velox.config | nindent 4 }}
+    {{- .Values.velox.config | nindent 4 }}
   {{- end}}
   {{- if .Values.metrics.enabled }}
   jmx_exporter.yaml: |-
