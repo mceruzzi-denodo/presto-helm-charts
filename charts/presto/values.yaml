@@ -254,8 +254,6 @@ velox:
     repository: prestodb/presto-native
     pullPolicy: IfNotPresent
     tag: ~
-  # Pull secrets for Velox workers (overrides common image details)
-  imagePullSecrets: []
   # Velox properties
   config: |-
     mutable-config=true
