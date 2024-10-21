@@ -36,7 +36,7 @@ data:
     regex-library=RE2J
     use-alternative-function-signatures=true
     experimental.table-writer-merge-operator-enabled=false
-    {{- end}}
+    {{- end }}
     {{- .Values.coordinator.config | default .Values.config | nindent 4 }}
   log.properties: |-
     {{- .Values.log | nindent 4 }}
