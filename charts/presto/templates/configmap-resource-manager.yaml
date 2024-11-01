@@ -33,6 +33,7 @@ data:
     resource-manager=true
     thrift.server.port=8081
     thrift.server.ssl.enabled=false
+    presto.version={{ .Values.image.tag | default .Chart.AppVersion }}{{- if .Values.velox.enabled }}wVelox{{ .Values.velox.image.tag }}{{- end }}
     {{- .Values.resourceManager.config | default .Values.config | nindent 4 }}
   log.properties: |-
     {{- .Values.log | nindent 4 }}
